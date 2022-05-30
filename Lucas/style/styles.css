@@ -1,0 +1,268 @@
+/*On crée deux preset pour deux couleurs*/
+:root {
+    --gray: #34495e;
+    --darkgray: #2c3e50;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*On fait en sorte que tout les caractère sois en majuscule et que le slide est lisse*/
+html {
+    text-transform: uppercase;
+    scroll-behavior: smooth;
+}
+
+/*On charge les polices d'écritures customs et on les nommes*/
+@font-face {
+    font-family: 'cream';
+    src: url('font/cream-DEMO.woff2') format('woff2'),
+        url('font/cream-DEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Coolvetica_Italic';
+    src: url('font/CoolveticaRg-Italic.woff2') format('woff2'),
+        url('font/CoolveticaRg-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('font/CoolveticaRg-Regular.woff2') format('woff2'),
+        url('font/CoolveticaRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coolvetica_Condensed';
+    src: url('font/CoolveticaCondensedRg-Regular.woff2') format('woff2'),
+        url('font/CoolveticaCondensedRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coolvetica_Crammed';
+    src: url('font/CoolveticaCrammedRg-Regular.woff2') format('woff2'),
+        url('font/CoolveticaCrammedRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coolvetica_Compressed';
+    src: url('font/CoolveticaCompressedHv-Regular.woff2') format('woff2'),
+        url('font/CoolveticaCompressedHv-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+/*On initialise la taille de la section*/
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    padding-top: 3%; 
+}
+
+/*On donne la forme a l'entête*/
+#div_form_class{
+    text-align: center;
+    background-color: #557455;
+    padding-bottom: 1.25%;
+    padding-top: 1.25%;
+    outline-style: double;
+    outline-color: rgb(255, 255, 255);
+    outline-width: 15px;
+}
+
+/*Modifie le titre de la pages*/
+#title{
+    color: white;
+    font-size: xx-large;
+    font-family: Coolvetica;
+}
+
+/*On modifie le sous titres de la pages*/
+#subtitle{
+    color: whitesmoke;
+    font-size: x-large;
+    font-family: Coolvetica;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+
+/*On modifie la ligne entre le titre et le sous titres*/
+#line{
+    color: white;
+    font-family: cream;
+    margin-bottom: -3px;
+}
+
+#Container_form_class{
+    /*ùalign-items: center;
+    align-content: center;*/
+    background-color: #739b73;
+}
+
+#div_form_class{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#form_class {
+    font-family: Coolvetica;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+optgroup {
+    font-family: Coolvetica; 
+}
+
+#Incontainer_center_form{
+    color: white;
+    min-height: 60vh;
+    width: min(60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px;
+    outline-style: double;
+    outline-color: rgb(255, 255, 255);
+    outline-width: 15px;
+    margin-left: 20%;
+    margin-bottom: 10%;
+    background-color: #557455;
+}
+
+#class{
+    /*on reset le select*/
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* on le custom*/
+    flex: 1;
+    padding: 0 1em;
+    color: var(--darkgray);
+    background-color: #f7f9fc;
+    background-image: none;
+    cursor: pointer;
+    display: flex;
+
+}
+
+/*Supprimer la flèche*/
+select::-ms-expand {
+    display: none;
+}
+
+/*Custom le select*/
+.select_class {
+    position: relative;
+    display: flex;
+    width: 13em;
+    height: 2.8em;
+    border-radius: .25em;
+    overflow: hidden;
+    font-family: Coolvetica;
+}
+
+/*La flèche*/
+.select_class::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #d5d8db;
+    transition: .25s all ease;
+    pointer-events: none;
+    color: var(--darkgray);
+    font-size: medium;
+}
+
+/*transition*/
+.select_class:hover::after {
+    color: #4dca4d;
+}
+
+/*On mets l'options qui est désactivé en gris clair pour l'adaptée au select*/
+#select_disabled{
+    color: var(--darkgray);
+}
+
+#d1 {
+    display: none;
+    margin-top: 5px;
+}
+
+#togg1 {
+    text-decoration: underline;
+    font-family: Coolvetica;
+    margin-top: 10px;
+    cursor: pointer;
+    content: "Plus de critères";
+    font-size: small;
+}
+
+/*On mofiie se qui est dans la "div" */
+#crit_text{
+    text-transform: none;
+    font-family: "roboto", sans-serif;
+}
+
+#form_in {
+    bottom: 10px;
+}
+
+#prelist_matos {
+    font-family: "roboto", sans-serif;
+    margin-bottom: 4px;
+    margin-top: 35px;
+}
+
+#submit_select{
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0em 0em 0;
+    border: 0.106em solid rgb(255, 255, 255);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+label{
+    font-family: "robot", sans-serif;
+    font-size: small;
+}
+
+#submit_select:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+#field_submit{
+    border: double rgb(255, 255, 255);
+    margin-top: 30px;  
+    padding: 0.5em 1.7em;
+}
